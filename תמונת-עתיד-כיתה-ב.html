@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תמונת העתיד המנצחת שלי – כיתה ב׳</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --yellow: #FFD166;
+    --orange: #FF9F1C;
+    --coral: #FF6B6B;
+    --purple: #A78BFA;
+    --purple-light: #EDE9FE;
+    --blue: #38BDF8;
+    --blue-light: #E0F2FE;
+    --green: #4ADE80;
+    --green-light: #DCFCE7;
+    --pink: #F472B6;
+    --pink-light: #FCE7F3;
+    --peach: #FDBA74;
+    --peach-light: #FFF7ED;
+    --teal: #2DD4BF;
+    --teal-light: #CCFBF1;
+    --ink: #1E1B4B;
+    --page-bg: #FFFBF0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Rubik', 'Heebo', sans-serif;
+    background: #e8e4da;
+    color: var(--ink);
+    direction: rtl;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 24px;
+    background: var(--page-bg);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ===== COVER PAGE ===== */
+  .cover {
+    background: linear-gradient(135deg, #FFF3C4 0%, #FFE0A0 40%, #FECACA 100%);
+    justify-content: center;
+    align-items: center;
+    padding: 20mm;
+    gap: 0;
+  }
+
+  .cover-stars {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+  }
+  .cover-stars .star {
+    position: absolute;
+    font-size: 28px;
+    animation: twinkle 3s ease-in-out infinite alternate;
+    opacity: 0.7;
+  }
+  @keyframes twinkle {
+    from { transform: scale(1) rotate(0deg); opacity: 0.5; }
+    to   { transform: scale(1.3) rotate(20deg); opacity: 1; }
+  }
+
+  .cover-badge {
+    background: var(--orange);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 8px 24px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(255,159,28,0.4);
+    animation-delay: 0.2s;
+  }
+
+  .cover-title-wrap {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .cover-title-main {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--ink);
+    display: block;
+    text-shadow: 3px 3px 0px rgba(255,159,28,0.3);
+  }
+  .cover-title-sub {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--coral);
+    display: block;
+    margin-top: 4px;
+  }
+  .cover-title-emoji {
+    font-size: 62px;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .cover-illustration {
+    width: 200px;
+    height: 180px;
+    margin: 16px auto;
+    position: relative;
+  }
+
+  /* SVG kid figure */
+  .cover-name-box {
+    background: white;
+    border: 3px dashed var(--orange);
+    border-radius: 20px;
+    padding: 16px 40px;
+    text-align: center;
+    margin-top: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .cover-name-label {
+    font-size: 16px;
+    color: #888;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .cover-name-line {
+    border-bottom: 2px solid var(--orange);
+    width: 160px;
+    margin: 0 auto;
+    height: 32px;
+  }
+
+  .cover-class-row {
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+    justify-content: center;
+  }
+  .cover-field {
+    background: white;
+    border-radius: 14px;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    min-width: 110px;
+  }
+  .cover-field label {
+    display: block;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 6px;
+  }
+  .cover-field .field-line {
+    border-bottom: 2px solid var(--purple);
+    height: 24px;
+  }
+
+  .cover-bottom-strip {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 16px;
+    background: repeating-linear-gradient(90deg,
+      var(--coral) 0, var(--coral) 30px,
+      var(--yellow) 30px, var(--yellow) 60px,
+      var(--purple) 60px, var(--purple) 90px,
+      var(--blue) 90px, var(--blue) 120px,
+      var(--green) 120px, var(--green) 150px,
+      var(--pink) 150px, var(--pink) 180px
+    );
+  }
+
+  /* ===== INTRO PAGE ===== */
+  .intro-page {
+    padding: 14mm 16mm;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .section-icon {
+    width: 56px; height: 56px;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  .map-intro-box {
+    background: linear-gradient(135deg, #FFF3C4, #FFF8E1);
+    border: 3px solid var(--yellow);
+    border-radius: 24px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .map-intro-box::before {
+    content: '🗺️';
+    position: absolute;
+    top: -18px;
+    right: 20px;
+    font-size: 36px;
+  }
+
+  .map-intro-title {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .map-intro-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+  }
+
+  .stations-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .station-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 16px;
+    padding: 12px 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-right: 5px solid;
+  }
+  .station-pill .pill-icon { font-size: 24px; }
+  .station-pill .pill-text { font-size: 15px; font-weight: 700; }
+  .station-pill .pill-num { font-size: 13px; color: #999; }
+
+  .how-to-use-box {
+    background: white;
+    border-radius: 20px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  .how-to-use-title {
+    font-size: 17px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: var(--coral);
+  }
+  .how-to-use-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .how-to-use-item .dot {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ===== STATION PAGES ===== */
+  .station-page {
+    padding: 0;
+  }
+
+  .station-header {
+    padding: 18px 18mm;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+  }
+
+  .station-number-big {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1;
+    opacity: 0.15;
+    position: absolute;
+    left: 14mm;
+    top: 10px;
+  }
+
+  .station-header-text {
+    flex: 1;
+  }
+  .station-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+  .station-name {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  .station-subtitle {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-top: 4px;
+  }
+  .station-header-emoji {
+    font-size: 58px;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.15));
+  }
+
+  .station-content {
+    padding: 0 16mm 10mm;
+    flex: 1;
+  }
+
+  /* Activity cards */
+  .activity-card {
+    background: white;
+    border-radius: 20px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.07);
+    position: relative;
+    overflow: hidden;
+  }
+  .activity-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 6px;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .activity-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .activity-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .activity-title {
+    font-size: 18px;
+    font-weight: 900;
+    flex: 1;
+  }
+  .activity-icon { font-size: 24px; }
+
+  .activity-instruction {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 12px;
+  }
+
+  /* Write/Draw areas */
+  .write-area {
+    border: 2px dashed;
+    border-radius: 14px;
+    padding: 10px 14px;
+    min-height: 60px;
+    position: relative;
+  }
+  .write-area.lines {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 30px,
+      rgba(0,0,0,0.07) 30px,
+      rgba(0,0,0,0.07) 31px
+    );
+    background-position: 0 39px;
+    min-height: 90px;
+  }
+  .write-area.big {
+    min-height: 120px;
+  }
+  .write-area.draw-area {
+    min-height: 90px;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    color: #bbb;
+    font-weight: 500;
+  }
+  .write-area .draw-hint { font-size: 28px; }
+
+  /* Cards grid */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .card-item {
+    border: 2px dashed;
+    border-radius: 14px;
+    padding: 10px;
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #ccc;
+    background: #fafafa;
+  }
+
+  /* Strength stickers area */
+  .stickers-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+    border: 2px dashed;
+    border-radius: 16px;
+    min-height: 70px;
+    margin-top: 8px;
+  }
+  .sticker-item {
+    background: white;
+    border: 2px solid;
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  /* Circles map */
+  .circles-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 180px;
+    margin: 10px 0;
+  }
+  .circle-ring {
+    position: absolute;
+    border: 3px dashed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: #888;
+  }
+
+  /* Commitment card */
+  .commitment-card {
+    border: 3px solid;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .commitment-title {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+  .commitment-sentence {
+    font-size: 17px;
+    line-height: 2.2;
+    font-weight: 500;
+  }
+  .commitment-line {
+    border-bottom: 2.5px solid;
+    display: inline-block;
+    width: 140px;
+    vertical-align: middle;
+    margin: 0 6px;
+  }
+  .signature-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 2px dashed rgba(0,0,0,0.1);
+  }
+  .sig-field {
+    text-align: center;
+  }
+  .sig-line {
+    border-bottom: 2px solid #ccc;
+    width: 100px;
+    margin: 0 auto 4px;
+    height: 28px;
+  }
+  .sig-label { font-size: 12px; color: #aaa; }
+
+  /* Divider wave */
+  .wave-divider {
+    height: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* Progress bar at top */
+  .progress-strip {
+    height: 8px;
+    display: flex;
+  }
+  .progress-seg {
+    flex: 1;
+  }
+
+  /* Decorative elements */
+  .deco-corner {
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  /* Reflection section */
+  .reflect-box {
+    background: linear-gradient(135deg, #F9F9FF, #F0F0FF);
+    border-radius: 16px;
+    padding: 14px 18px;
+    margin-top: 12px;
+  }
+  .reflect-title {
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  .reflect-stars {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .reflect-star {
+    font-size: 28px;
+    cursor: pointer;
+    opacity: 0.3;
+  }
+  .reflect-star:hover { opacity: 1; }
+
+  /* Page footer */
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16mm;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    font-size: 12px;
+    color: #bbb;
+    margin-top: auto;
+  }
+
+  /* Summary page */
+  .my-map-container {
+    border: 3px solid var(--orange);
+    border-radius: 24px;
+    padding: 20px;
+    background: white;
+    position: relative;
+  }
+  .map-center {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--yellow), var(--orange));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px;
+    margin: 0 auto 16px;
+    box-shadow: 0 4px 20px rgba(255,159,28,0.3);
+  }
+  .map-name-big {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+  .map-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .map-cell {
+    border: 2px solid;
+    border-radius: 16px;
+    padding: 12px;
+  }
+  .map-cell-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+  .map-cell-lines {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0, transparent 22px,
+      rgba(0,0,0,0.08) 22px, rgba(0,0,0,0.08) 23px
+    );
+    min-height: 68px;
+  }
+
+  /* ===== COLOR THEMES PER STATION ===== */
+  /* Purple - Strengths */
+  .theme-purple .station-header { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); }
+  .theme-purple .station-name { color: #5B21B6; }
+  .theme-purple .station-label { color: #7C3AED; }
+  .theme-purple .station-number-big { color: #7C3AED; }
+  .theme-purple .activity-card::before { background: #7C3AED; }
+  .theme-purple .activity-badge { background: #EDE9FE; color: #5B21B6; }
+  .theme-purple .write-area { border-color: #A78BFA; }
+  .theme-purple .stickers-area { border-color: #A78BFA; }
+  .theme-purple .sticker-item { border-color: #A78BFA; color: #5B21B6; }
+  .theme-purple .progress-strip .active { background: #7C3AED; }
+
+  /* Coral - Social */
+  .theme-coral .station-header { background: linear-gradient(135deg, #FEE2E2, #FECACA); }
+  .theme-coral .station-name { color: #B91C1C; }
+  .theme-coral .station-label { color: #DC2626; }
+  .theme-coral .station-number-big { color: #DC2626; }
+  .theme-coral .activity-card::before { background: #EF4444; }
+  .theme-coral .activity-badge { background: #FEE2E2; color: #B91C1C; }
+  .theme-coral .write-area { border-color: #FCA5A5; }
+  .theme-coral .circle-ring { border-color: #FCA5A5; }
+
+  /* Blue - Learning */
+  .theme-blue .station-header { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); }
+  .theme-blue .station-name { color: #075985; }
+  .theme-blue .station-label { color: #0284C7; }
+  .theme-blue .station-number-big { color: #0284C7; }
+  .theme-blue .activity-card::before { background: #0EA5E9; }
+  .theme-blue .activity-badge { background: #E0F2FE; color: #075985; }
+  .theme-blue .write-area { border-color: #7DD3FC; }
+
+  /* Green - Hobbies */
+  .theme-green .station-header { background: linear-gradient(135deg, #DCFCE7, #BBF7D0); }
+  .theme-green .station-name { color: #14532D; }
+  .theme-green .station-label { color: #16A34A; }
+  .theme-green .station-number-big { color: #16A34A; }
+  .theme-green .activity-card::before { background: #22C55E; }
+  .theme-green .activity-badge { background: #DCFCE7; color: #14532D; }
+  .theme-green .write-area { border-color: #86EFAC; }
+
+  /* Pink - Next Step */
+  .theme-pink .station-header { background: linear-gradient(135deg, #FCE7F3, #FBCFE8); }
+  .theme-pink .station-name { color: #9D174D; }
+  .theme-pink .station-label { color: #BE185D; }
+  .theme-pink .station-number-big { color: #BE185D; }
+  .theme-pink .activity-card::before { background: #EC4899; }
+  .theme-pink .activity-badge { background: #FCE7F3; color: #9D174D; }
+  .theme-pink .write-area { border-color: #F9A8D4; }
+  .theme-pink .commitment-card { border-color: #F472B6; }
+  .theme-pink .commitment-line { border-color: #F472B6; }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; }
+    @page { size: A4; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1: COVER ===== -->
+<div class="page cover">
+  <div class="cover-stars">
+    <span class="star" style="top:8%;right:8%;animation-delay:0s">⭐</span>
+    <span class="star" style="top:15%;left:12%;animation-delay:0.5s">✨</span>
+    <span class="star" style="top:5%;left:35%;animation-delay:1s">🌟</span>
+    <span class="star" style="bottom:20%;right:6%;animation-delay:1.5s">⭐</span>
+    <span class="star" style="bottom:28%;left:8%;animation-delay:0.8s">✨</span>
+    <span class="star" style="top:40%;left:5%;animation-delay:0.3s">🌟</span>
+    <span class="star" style="top:30%;right:5%;animation-delay:1.2s">⭐</span>
+    <span class="star" style="bottom:12%;left:40%;animation-delay:0.6s">✨</span>
+  </div>
+
+  <div class="cover-badge">📚 כִּיתָה בֵּ׳ · מֶחֱצִית שְׁנִיָּה</div>
+
+  <div class="cover-title-wrap">
+    <span class="cover-title-emoji">🏆</span>
+    <span class="cover-title-main">תְּמוּנַת הָעָתִיד</span>
+    <span class="cover-title-sub">הַמְּנַצַּחַת שֶׁלִּי!</span>
+  </div>
+
+  <svg width="220" height="180" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Ground -->
+    <ellipse cx="110" cy="168" rx="80" ry="10" fill="#F0E68C" opacity="0.4"/>
+    <!-- Body -->
+    <rect x="80" y="90" width="60" height="70" rx="16" fill="#FFB347"/>
+    <!-- Head -->
+    <circle cx="110" cy="72" r="30" fill="#FFDAB9"/>
+    <!-- Hair -->
+    <ellipse cx="110" cy="48" rx="30" ry="14" fill="#8B4513"/>
+    <!-- Eyes -->
+    <circle cx="100" cy="70" r="4" fill="#333"/>
+    <circle cx="120" cy="70" r="4" fill="#333"/>
+    <circle cx="101" cy="69" r="1.5" fill="white"/>
+    <circle cx="121" cy="69" r="1.5" fill="white"/>
+    <!-- Smile -->
+    <path d="M100 82 Q110 92 120 82" stroke="#333" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Arms -->
+    <rect x="52" y="96" width="30" height="14" rx="7" fill="#FFB347" transform="rotate(-20 52 96)"/>
+    <rect x="138" y="96" width="30" height="14" rx="7" fill="#FFB347" transform="rotate(20 138 96)"/>
+    <!-- Trophy in right hand -->
+    <text x="148" y="100" font-size="28">🏆</text>
+    <!-- Star in left hand -->
+    <text x="34" y="100" font-size="22">⭐</text>
+    <!-- Legs -->
+    <rect x="88" y="155" width="16" height="20" rx="8" fill="#4169E1"/>
+    <rect x="116" y="155" width="16" height="20" rx="8" fill="#4169E1"/>
+    <!-- Shoes -->
+    <ellipse cx="96" cy="175" rx="12" ry="6" fill="#333"/>
+    <ellipse cx="124" cy="175" rx="12" ry="6" fill="#333"/>
+    <!-- Star on shirt -->
+    <text x="100" y="130" font-size="18">🌟</text>
+  </svg>
+
+  <div class="cover-name-box">
+    <div class="cover-name-label">הַשֵּׁם שֶׁלִּי</div>
+    <div class="cover-name-line"></div>
+  </div>
+
+  <div class="cover-class-row">
+    <div class="cover-field">
+      <label>כִּיתָה</label>
+      <div class="field-line"></div>
+    </div>
+    <div class="cover-field">
+      <label>מוֹרָה</label>
+      <div class="field-line"></div>
+    </div>
+    <div class="cover-field">
+      <label>שָׁנָה</label>
+      <div class="field-line"></div>
+    </div>
+  </div>
+
+  <div class="cover-bottom-strip"></div>
+</div>
+
+
+<!-- ===== PAGE 2: INTRO ===== -->
+<div class="page intro-page">
+  <div class="progress-strip" style="margin-bottom:0">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EF4444"></div>
+    <div class="progress-seg" style="background:#0EA5E9"></div>
+    <div class="progress-seg" style="background:#22C55E"></div>
+    <div class="progress-seg" style="background:#EC4899"></div>
+  </div>
+
+  <div style="padding:14mm 16mm 0">
+    <div class="map-intro-box">
+      <div class="map-intro-title">🗺️ מַה זֹּאת הַחוֹבֶרֶת הַזֹּאת?</div>
+      <div class="map-intro-text">
+        הַחוֹבֶרֶת הַזֹּאת הִיא <strong>הַמַּפָּה הָאִישִׁית שֶׁלְּךָ/שֶׁלָּךְ</strong> לַשָּׁנָה!<br>
+        בַּחוֹבֶרֶת תִּגְלֶה/תִּגְלִי דְּבָרִים מְעַנְיְּנִים עָלֶיךָ/עָלַיִךְ,<br>
+        תַּחְשֹׁב/תַּחְשְׁבִי עַל הַחֲבֵרִים וְהַמִּשְׁפָּחָה שֶׁלְּךָ/שֶׁלָּךְ,<br>
+        וְתִּבְנֶה/תִּבְנִי לְעַצְמְךָ/לְעַצְמֵךְ <strong>תְּמוּנָה מְנַצַּחַת</strong> לָעָתִיד! 🌈
+      </div>
+    </div>
+
+    <div style="font-size:18px;font-weight:900;margin-bottom:12px;color:var(--ink)">הַתַּחֲנוֹת שֶׁלָּנוּ:</div>
+
+    <div class="stations-overview">
+      <div class="station-pill" style="border-color:#7C3AED">
+        <span class="pill-icon">💪</span>
+        <div>
+          <div class="pill-num">תַּחֲנָה 1</div>
+          <div class="pill-text">הַחוֹזְקוֹת שֶׁלִּי</div>
+        </div>
+      </div>
+      <div class="station-pill" style="border-color:#EF4444">
+        <span class="pill-icon">❤️</span>
+        <div>
+          <div class="pill-num">תַּחֲנָה 2</div>
+          <div class="pill-text">הַחֲבֵרִים וְהַמִּשְׁפָּחָה</div>
+        </div>
+      </div>
+      <div class="station-pill" style="border-color:#0EA5E9">
+        <span class="pill-icon">📚</span>
+        <div>
+          <div class="pill-num">תַּחֲנָה 3</div>
+          <div class="pill-text">הַיְּעָדִים שֶׁלִּי</div>
+        </div>
+      </div>
+      <div class="station-pill" style="border-color:#22C55E">
+        <span class="pill-icon">⚽</span>
+        <div>
+          <div class="pill-num">תַּחֲנָה 4</div>
+          <div class="pill-text">מַה אֲנִי אוֹהֵב/ת</div>
+        </div>
+      </div>
+      <div class="station-pill" style="border-color:#EC4899;grid-column:1/-1;max-width:50%;margin:0 auto">
+        <span class="pill-icon">🚀</span>
+        <div>
+          <div class="pill-num">תַּחֲנָה 5</div>
+          <div class="pill-text">הַצַּעַד הַבָּא שֶׁלִּי</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-to-use-box">
+      <div class="how-to-use-title">📌 אֵיךְ מִשְׁתַּמְּשִׁים בַּחוֹבֶרֶת?</div>
+      <div class="how-to-use-item">
+        <div class="dot" style="background:#7C3AED">1</div>
+        <span>בְּכָל שָׁבוּעַ עוֹבְדִים עַל תַּחֲנָה אַחַת אוֹ שְׁתַּיִם</span>
+      </div>
+      <div class="how-to-use-item">
+        <div class="dot" style="background:#EF4444">2</div>
+        <span>אֶפְשָׁר לִכְתֹּב, לְצַיֵּר, לְהַדְבִּיק מַדְבֵּקוֹת – הַכֹּל כָּשֵׁר!</span>
+      </div>
+      <div class="how-to-use-item">
+        <div class="dot" style="background:#0EA5E9">3</div>
+        <span>בְּסוֹף הַמֶּחֱצִית בּוֹנִים יַחַד אֶת הַמַּפָּה הַמְּנַצַּחַת</span>
+      </div>
+      <div class="how-to-use-item">
+        <div class="dot" style="background:#22C55E">4</div>
+        <span>אֵין תְּשׁוּבוֹת נְכוֹנוֹת וְלֹא נְכוֹנוֹת – רַק שֶׁלְּךָ/שֶׁלָּךְ! 💛</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>📍 תְּמוּנַת הָעָתִיד הַמְּנַצַּחַת שֶׁלִּי</span>
+    <span>2</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 3: STATION 1 – STRENGTHS (Activity 1 + 2) ===== -->
+<div class="page station-page theme-purple">
+  <div class="progress-strip">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EDE9FE"></div>
+    <div class="progress-seg" style="background:#EDE9FE"></div>
+    <div class="progress-seg" style="background:#EDE9FE"></div>
+    <div class="progress-seg" style="background:#EDE9FE"></div>
+  </div>
+
+  <div class="station-header theme-purple">
+    <div class="station-number-big">1</div>
+    <div class="station-header-text">
+      <div class="station-label">תַּחֲנָה רִאשׁוֹנָה</div>
+      <div class="station-name">הַחוֹזְקוֹת שֶׁלִּי 💪</div>
+      <div class="station-subtitle">מָה אֲנִי טוֹב/טוֹבָה בּוֹ?</div>
+    </div>
+    <div class="station-header-emoji">💜</div>
+  </div>
+
+  <div class="station-content">
+
+    <!-- Activity 1.1 -->
+    <div class="activity-card">
+      <div class="activity-card" style="box-shadow:none;padding:0;margin:0">
+        <div class="activity-header">
+          <span class="activity-icon">✨</span>
+          <div class="activity-badge" style="background:#EDE9FE;color:#5B21B6">פְּעִילוּת 1</div>
+          <div class="activity-title">הַמַּדְבֵּקוֹת שֶׁלִּי</div>
+        </div>
+        <div class="activity-instruction">
+          קְרָא/קִרְאִי כָּל חוֹזְקָה. אִם הִיא שַׁיֶּכֶת לְךָ/לָךְ – ✓ בְּתוֹךְ הַמַּשְׁבֵּצֶת!
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+          <div class="sticker-item" style="border-color:#A78BFA">☺️ אֲנִי עוֹזֵר/עוֹזֶרֶת</div>
+          <div class="sticker-item" style="border-color:#A78BFA">🎨 אֲנִי יוֹצֵר/יוֹצֶרֶת</div>
+          <div class="sticker-item" style="border-color:#A78BFA">😄 אֲנִי מְשַׂמֵּחַ/מְשַׂמַּחַת</div>
+          <div class="sticker-item" style="border-color:#A78BFA">💪 אֲנִי מְנַסֶּה</div>
+          <div class="sticker-item" style="border-color:#A78BFA">📖 אֲנִי אוֹהֵב/ת לִקְרֹא</div>
+          <div class="sticker-item" style="border-color:#A78BFA">🤝 אֲנִי חָבֵר/חֲבֵרָה טוֹב/טוֹבָה</div>
+          <div class="sticker-item" style="border-color:#A78BFA">🎵 אֲנִי מוּזִיקָלִי/ת</div>
+          <div class="sticker-item" style="border-color:#A78BFA">🧠 אֲנִי חוֹשֵׁב/ת</div>
+          <div class="sticker-item" style="border-color:#A78BFA">⚽ אֲנִי סְפּוֹרְטִיבִי/ת</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 1.2 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">⭐</span>
+        <div class="activity-badge" style="background:#EDE9FE;color:#5B21B6">פְּעִילוּת 2</div>
+        <div class="activity-title">הַכּוֹכָב שֶׁלִּי</div>
+      </div>
+      <div class="activity-instruction">
+        בְּתוֹךְ הַכּוֹכָב – כְּתוֹב/כִּתְבִי אוֹ צַיֵּר/צַיְּרִי מַשֶּׁהוּ שֶׁאַתֶּה/אַתְּ מַצְלִיח/ה בּוֹ בַּלִּמּוּדִים אוֹ בְּהַפְסָקָה.
+      </div>
+      <div style="display:flex;align-items:center;gap:16px">
+        <svg width="120" height="114" viewBox="0 0 120 114" fill="none" style="flex-shrink:0">
+          <polygon points="60,6 74,42 113,42 83,65 94,101 60,79 26,101 37,65 7,42 46,42" fill="#FEF3C7" stroke="#FCD34D" stroke-width="3"/>
+          <text x="60" y="62" text-anchor="middle" font-size="11" fill="#92400E" font-family="Rubik" font-weight="700">כִּתְבוּ</text>
+          <text x="60" y="76" text-anchor="middle" font-size="11" fill="#92400E" font-family="Rubik" font-weight="700">כָּאן!</text>
+        </svg>
+        <div style="flex:1">
+          <div style="font-size:15px;font-weight:700;margin-bottom:6px;color:#5B21B6">מִי אָמַר לִי אֶת זֶה?</div>
+          <div class="write-area" style="border-color:#A78BFA;min-height:50px"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span>💪 תַּחֲנָה 1 – הַחוֹזְקוֹת שֶׁלִּי</span>
+    <span>3</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 4: STATION 1 continued (Activities 3+4) ===== -->
+<div class="page station-page theme-purple">
+  <div class="progress-strip">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EDE9FE"></div>
+    <div class="progress-seg" style="background:#EDE9FE"></div>
+    <div class="progress-seg" style="background:#EDE9FE"></div>
+    <div class="progress-seg" style="background:#EDE9FE"></div>
+  </div>
+  <div class="station-header theme-purple" style="padding-top:12px;padding-bottom:12px">
+    <div class="station-number-big">1</div>
+    <div class="station-header-text">
+      <div class="station-label">תַּחֲנָה רִאשׁוֹנָה – הֶמְשֵׁךְ</div>
+      <div class="station-name">הַחוֹזְקוֹת שֶׁלִּי 💪</div>
+    </div>
+  </div>
+  <div class="station-content">
+
+    <!-- Activity 1.3 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🎁</span>
+        <div class="activity-badge" style="background:#EDE9FE;color:#5B21B6">פְּעִילוּת 3</div>
+        <div class="activity-title">מַתָּנָה לַחָבֵר/לַחֲבֵרָה</div>
+      </div>
+      <div class="activity-instruction">
+        חַשְּׁבוּ עַל חָבֵר/חֲבֵרָה בַּכִּיתָה. אֵיזוֹ חוֹזְקָה יֵשׁ לוֹ/לָה? כִּתְבוּ לוֹ/לָה מִשְׁפָּט יָפֶה!
+      </div>
+      <div style="font-size:14px;font-weight:700;color:#7C3AED;margin-bottom:6px">
+        לְ: _______________________________
+      </div>
+      <div class="write-area lines" style="border-color:#A78BFA">
+      </div>
+      <div style="margin-top:8px;font-size:13px;color:#aaa;text-align:center">✉️ אֶפְשָׁר לְהַעֲבִיר לוֹ/לָה!</div>
+    </div>
+
+    <!-- Activity 1.4 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🌸</span>
+        <div class="activity-badge" style="background:#EDE9FE;color:#5B21B6">פְּעִילוּת 4</div>
+        <div class="activity-title">הַפֶּרַח שֶׁלִּי</div>
+      </div>
+      <div class="activity-instruction">
+        בְּכָל עָלֶה שֶׁל הַפֶּרַח – כִּתְבוּ חוֹזְקָה אַחַת שֶׁלָּכֶם. אֶפְשָׁר לְצַיֵּר גַּם!
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <svg width="160" height="160" viewBox="0 0 160 160" fill="none">
+          <!-- Petals -->
+          <ellipse cx="80" cy="35" rx="20" ry="30" fill="#DDD6FE" opacity="0.8"/>
+          <ellipse cx="80" cy="125" rx="20" ry="30" fill="#DDD6FE" opacity="0.8"/>
+          <ellipse cx="35" cy="80" rx="30" ry="20" fill="#DDD6FE" opacity="0.8"/>
+          <ellipse cx="125" cy="80" rx="30" ry="20" fill="#DDD6FE" opacity="0.8"/>
+          <ellipse cx="46" cy="46" rx="20" ry="30" fill="#C4B5FD" opacity="0.7" transform="rotate(-45 46 46)"/>
+          <ellipse cx="114" cy="46" rx="20" ry="30" fill="#C4B5FD" opacity="0.7" transform="rotate(45 114 46)"/>
+          <ellipse cx="46" cy="114" rx="20" ry="30" fill="#C4B5FD" opacity="0.7" transform="rotate(45 46 114)"/>
+          <ellipse cx="114" cy="114" rx="20" ry="30" fill="#C4B5FD" opacity="0.7" transform="rotate(-45 114 114)"/>
+          <!-- Center -->
+          <circle cx="80" cy="80" r="28" fill="#7C3AED"/>
+          <text x="80" y="85" text-anchor="middle" font-size="13" fill="white" font-family="Rubik" font-weight="900">אֲנִי!</text>
+        </svg>
+        <div style="flex:1;font-size:14px;color:#666;line-height:1.8">
+          ✏️ כִּתְבוּ עַל כָּל עָלֶה<br>
+          חוֹזְקָה אַחֶרֶת<br><br>
+          🎨 צַבְּעוּ כָּל עָלֶה<br>
+          בְּצֶבַע אַחֵר
+        </div>
+      </div>
+    </div>
+
+    <!-- Reflection -->
+    <div class="reflect-box">
+      <div class="reflect-title">💭 אֵיךְ הִרְגַּשְׁתֶּם בַּתַּחֲנָה הַזֹּאת?</div>
+      <div class="reflect-stars">
+        <span class="reflect-star">😐</span>
+        <span class="reflect-star">🙂</span>
+        <span class="reflect-star">😊</span>
+        <span class="reflect-star">😁</span>
+        <span class="reflect-star">🤩</span>
+      </div>
+      <div class="write-area" style="border-color:#A78BFA;min-height:40px;font-size:14px">
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span>💪 תַּחֲנָה 1 – הַחוֹזְקוֹת שֶׁלִּי</span>
+    <span>4</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 5: STATION 2 – SOCIAL CIRCLE ===== -->
+<div class="page station-page theme-coral">
+  <div class="progress-strip">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EF4444"></div>
+    <div class="progress-seg" style="background:#FEE2E2"></div>
+    <div class="progress-seg" style="background:#FEE2E2"></div>
+    <div class="progress-seg" style="background:#FEE2E2"></div>
+  </div>
+  <div class="station-header theme-coral">
+    <div class="station-number-big">2</div>
+    <div class="station-header-text">
+      <div class="station-label">תַּחֲנָה שְׁנִיָּה</div>
+      <div class="station-name">הַחֲבֵרִים וְהַמִּשְׁפָּחָה ❤️</div>
+      <div class="station-subtitle">מִי הָאֲנָשִׁים הַחֲשׁוּבִים בְּחַיַּי?</div>
+    </div>
+    <div class="station-header-emoji">🧡</div>
+  </div>
+  <div class="station-content">
+
+    <!-- Activity 2.1 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">⭕</span>
+        <div class="activity-badge" style="background:#FEE2E2;color:#B91C1C">פְּעִילוּת 1</div>
+        <div class="activity-title">מַפַּת הַמַּעֲגָלִים שֶׁלִּי</div>
+      </div>
+      <div class="activity-instruction">
+        כִּתְבוּ/צַיְּרוּ בַּמַּעֲגָלִים אֶת הָאֲנָשִׁים שֶׁבְּחַיֵּיכֶם!
+      </div>
+      <div class="circles-container">
+        <div class="circle-ring" style="width:60px;height:60px;border-color:#EF4444;background:#FEF2F2;font-size:11px;font-weight:900;color:#B91C1C">אֲנִי</div>
+        <div class="circle-ring" style="width:120px;height:120px;border-color:#FCA5A5;background:transparent">
+          <span style="position:absolute;top:2px;right:50%;transform:translateX(50%);font-size:10px;color:#EF4444;background:#FFF5F5;padding:2px 6px;border-radius:100px;white-space:nowrap">מִשְׁפָּחָה</span>
+        </div>
+        <div class="circle-ring" style="width:190px;height:190px;border-color:#FECACA;background:transparent">
+          <span style="position:absolute;top:2px;right:50%;transform:translateX(50%);font-size:10px;color:#EF4444;background:#FFF5F5;padding:2px 6px;border-radius:100px;white-space:nowrap">חֲבֵרִים קְרוֹבִים</span>
+        </div>
+        <div class="circle-ring" style="width:260px;height:260px;border-color:#FEE2E2;background:transparent">
+          <span style="position:absolute;top:2px;right:50%;transform:translateX(50%);font-size:10px;color:#EF4444;background:#FFF5F5;padding:2px 6px;border-radius:100px;white-space:nowrap">מְבוּגָרִים שֶׁאֶפְנֶה אֲלֵיהֶם</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 2.2 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">💌</span>
+        <div class="activity-badge" style="background:#FEE2E2;color:#B91C1C">פְּעִילוּת 2</div>
+        <div class="activity-title">מִכְתָּב לְמִישֶׁהוּ מְיֻחָד</div>
+      </div>
+      <div class="activity-instruction">
+        בְּחַר/בַּחֲרִי אֶחָד/אַחַת מֵהָאֲנָשִׁים שֶׁכָּתַבְתֶּם בַּמַּעֲגָלִים. כִּתְבוּ לוֹ/לָה מִשְׁפָּט שֶׁאוֹמֵר מָה אֲנִי אוֹהֵב/ת בּוֹ/בָּה.
+      </div>
+      <div style="background:#FFF5F5;border:2px solid #FCA5A5;border-radius:12px;padding:12px">
+        <div style="font-size:14px;font-weight:700;color:#B91C1C;margin-bottom:8px">לְ: _____________________</div>
+        <div style="font-size:15px;color:#555;line-height:2.4">
+          אֲנִי אוֹהֵב/ת אוֹתְךָ/אוֹתָךְ כִּי ___________________________<br>
+          אַתָּה/אַתְּ עוֹזֵר/עוֹזֶרֶת לִי כְּשֶׁ ___________________________<br>
+          תּוֹדָה שֶׁ _____________________________
+        </div>
+        <div style="margin-top:8px;text-align:left;font-size:13px;color:#aaa">חָתוּם/חֲתוּמָה: ________________</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span>❤️ תַּחֲנָה 2 – הַחֲבֵרִים וְהַמִּשְׁפָּחָה</span>
+    <span>5</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 6: STATION 2 continued ===== -->
+<div class="page station-page theme-coral">
+  <div class="progress-strip">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EF4444"></div>
+    <div class="progress-seg" style="background:#FEE2E2"></div>
+    <div class="progress-seg" style="background:#FEE2E2"></div>
+    <div class="progress-seg" style="background:#FEE2E2"></div>
+  </div>
+  <div class="station-header theme-coral" style="padding-top:12px;padding-bottom:12px">
+    <div class="station-number-big">2</div>
+    <div class="station-header-text">
+      <div class="station-label">תַּחֲנָה שְׁנִיָּה – הֶמְשֵׁךְ</div>
+      <div class="station-name">הַחֲבֵרִים וְהַמִּשְׁפָּחָה ❤️</div>
+    </div>
+  </div>
+  <div class="station-content">
+
+    <!-- Activity 2.3 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🤝</span>
+        <div class="activity-badge" style="background:#FEE2E2;color:#B91C1C">פְּעִילוּת 3</div>
+        <div class="activity-title">חָבֵר/חֲבֵרָה טוֹב/טוֹבָה זֶה/זֹּאת...</div>
+      </div>
+      <div class="activity-instruction">
+        מִלְּאוּ אֶת הַמִּשְׁפָּטִים:
+      </div>
+      <div style="font-size:15px;line-height:2.8;color:#555">
+        חָבֵר/חֲבֵרָה טוֹב/טוֹבָה עוֹזֵר/עוֹזֶרֶת כְּשֶׁ ________________________<br>
+        חָבֵר/חֲבֵרָה טוֹב/טוֹבָה לֹא ________________________<br>
+        אֲנִי יוֹדֵעַ/יוֹדַעַת שֶׁיֵּשׁ לִי חָבֵר/חֲבֵרָה טוֹב/טוֹבָה כְּשֶׁ ________________________
+      </div>
+    </div>
+
+    <!-- Activity 2.4 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🆘</span>
+        <div class="activity-badge" style="background:#FEE2E2;color:#B91C1C">פְּעִילוּת 4</div>
+        <div class="activity-title">לְמִי אֶפְנֶה כְּשֶׁקָּשֶׁה?</div>
+      </div>
+      <div class="activity-instruction">
+        בְּכָל מַצָּב – כִּתְבוּ אֵלָיו/אֵלֶיהָ תִּפְנוּ:
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px">
+        <div style="background:#FFF5F5;border-radius:12px;padding:10px">
+          <div style="font-size:13px;font-weight:700;color:#EF4444;margin-bottom:6px">😢 כְּשֶׁקָּשֶׁה לִי עִם חָבֵר/חֲבֵרָה</div>
+          <div style="border-bottom:2px solid #FCA5A5;height:26px;margin-bottom:4px"></div>
+          <div style="border-bottom:2px solid #FCA5A5;height:26px"></div>
+        </div>
+        <div style="background:#FFF5F5;border-radius:12px;padding:10px">
+          <div style="font-size:13px;font-weight:700;color:#EF4444;margin-bottom:6px">📚 כְּשֶׁקָּשֶׁה לִי בַּלִּמּוּדִים</div>
+          <div style="border-bottom:2px solid #FCA5A5;height:26px;margin-bottom:4px"></div>
+          <div style="border-bottom:2px solid #FCA5A5;height:26px"></div>
+        </div>
+        <div style="background:#FFF5F5;border-radius:12px;padding:10px">
+          <div style="font-size:13px;font-weight:700;color:#EF4444;margin-bottom:6px">😤 כְּשֶׁאֲנִי עָצוּב/עֲצוּבָה</div>
+          <div style="border-bottom:2px solid #FCA5A5;height:26px;margin-bottom:4px"></div>
+          <div style="border-bottom:2px solid #FCA5A5;height:26px"></div>
+        </div>
+        <div style="background:#FFF5F5;border-radius:12px;padding:10px">
+          <div style="font-size:13px;font-weight:700;color:#EF4444;margin-bottom:6px">🎉 כְּשֶׁאֲנִי שָׂמֵחַ/שְׂמֵחָה</div>
+          <div style="border-bottom:2px solid #FCA5A5;height:26px;margin-bottom:4px"></div>
+          <div style="border-bottom:2px solid #FCA5A5;height:26px"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflect-box">
+      <div class="reflect-title">💭 מָה לָמַדְתֶּם עַל עַצְמְכֶם בַּתַּחֲנָה הַזֹּאת?</div>
+      <div class="write-area" style="border-color:#FCA5A5;min-height:40px"></div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span>❤️ תַּחֲנָה 2 – הַחֲבֵרִים וְהַמִּשְׁפָּחָה</span>
+    <span>6</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 7: STATION 3 – LEARNING GOALS ===== -->
+<div class="page station-page theme-blue">
+  <div class="progress-strip">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EF4444"></div>
+    <div class="progress-seg" style="background:#0EA5E9"></div>
+    <div class="progress-seg" style="background:#E0F2FE"></div>
+    <div class="progress-seg" style="background:#E0F2FE"></div>
+  </div>
+  <div class="station-header theme-blue">
+    <div class="station-number-big">3</div>
+    <div class="station-header-text">
+      <div class="station-label">תַּחֲנָה שְׁלִישִׁית</div>
+      <div class="station-name">הַיְּעָדִים שֶׁלִּי 📚</div>
+      <div class="station-subtitle">לְאָן אֲנִי רוֹצֶה/רוֹצָה לְהַגִּיעַ?</div>
+    </div>
+    <div class="station-header-emoji">💙</div>
+  </div>
+  <div class="station-content">
+
+    <!-- Explain target -->
+    <div style="background:#E0F2FE;border-radius:16px;padding:14px 18px;margin-bottom:14px;font-size:14px;line-height:1.8;color:#0C4A6E">
+      🎯 <strong>יָעַד</strong> הוּא מַשֶּׁהוּ שֶׁאֲנִי רוֹצֶה/רוֹצָה לְהַשִּׂיג! כְּשֶׁמַּגִּיעִים לְיָעַד – מַרְגִּישִׁים סִפּוּק גָּדוֹל 🏆
+    </div>
+
+    <!-- Activity 3.1 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🎯</span>
+        <div class="activity-badge" style="background:#E0F2FE;color:#075985">פְּעִילוּת 1</div>
+        <div class="activity-title">הַיְּעָד הַלִּמּוּדִי שֶׁלִּי</div>
+      </div>
+      <div class="activity-instruction">
+        מִלְּאוּ אֶת הַמִּשְׁפָּטִים:
+      </div>
+      <div style="background:#F0F9FF;border:2px solid #7DD3FC;border-radius:14px;padding:14px">
+        <div style="font-size:16px;line-height:2.8;color:#0C4A6E">
+          עַד סוֹף הַשָּׁנָה אֲנִי רוֹצֶה/רוֹצָה לִלְמֹד ________________<br>
+          אֵדַע שֶׁהִצְלַחְתִּי כְּשֶׁ ________________<br>
+          מִי יוּכַל לַעֲזֹר לִי? ________________
+        </div>
+      </div>
+      <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
+        <div style="font-size:13px;color:#0EA5E9;font-weight:700">רֶמֶז: אֶפְשָׁר לִבְחֹר</div>
+        <span style="font-size:12px;background:#E0F2FE;padding:4px 10px;border-radius:100px;color:#075985">לִקְרֹא סֵפֶר לְבַד</span>
+        <span style="font-size:12px;background:#E0F2FE;padding:4px 10px;border-radius:100px;color:#075985">לֶאֱסֹף עַד 100</span>
+        <span style="font-size:12px;background:#E0F2FE;padding:4px 10px;border-radius:100px;color:#075985">לִכְתֹּב בְּלִי עֶזְרָה</span>
+      </div>
+    </div>
+
+    <!-- Activity 3.2 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🪜</span>
+        <div class="activity-badge" style="background:#E0F2FE;color:#075985">פְּעִילוּת 2</div>
+        <div class="activity-title">הַסֻּלָּם לַיָּעַד</div>
+      </div>
+      <div class="activity-instruction">
+        בְּכָל שְׁלַב בַּסֻּלָּם – כִּתְבוּ צַעַד אֶחָד שֶׁיְּקָרֵב אֶתְכֶם לַיָּעַד:
+      </div>
+      <div style="display:flex;align-items:flex-end;gap:12px">
+        <svg width="80" height="160" viewBox="0 0 80 160">
+          <line x1="15" y1="10" x2="15" y2="155" stroke="#7DD3FC" stroke-width="4"/>
+          <line x1="65" y1="10" x2="65" y2="155" stroke="#7DD3FC" stroke-width="4"/>
+          <line x1="10" y1="40" x2="70" y2="40" stroke="#0EA5E9" stroke-width="3"/>
+          <line x1="10" y1="75" x2="70" y2="75" stroke="#0EA5E9" stroke-width="3"/>
+          <line x1="10" y1="110" x2="70" y2="110" stroke="#0EA5E9" stroke-width="3"/>
+          <line x1="10" y1="145" x2="70" y2="145" stroke="#0EA5E9" stroke-width="3"/>
+          <text x="40" y="22" text-anchor="middle" font-size="18">🏆</text>
+          <text x="40" y="62" text-anchor="middle" font-size="11" fill="#0C4A6E" font-family="Rubik">3</text>
+          <text x="40" y="97" text-anchor="middle" font-size="11" fill="#0C4A6E" font-family="Rubik">2</text>
+          <text x="40" y="132" text-anchor="middle" font-size="11" fill="#0C4A6E" font-family="Rubik">1</text>
+        </svg>
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+          <div>
+            <div style="font-size:12px;color:#0EA5E9;font-weight:700;margin-bottom:4px">שְׁלַב 3 – מְתָקְדֵּם/מְתָקְדֶּמֶת</div>
+            <div style="border-bottom:2px solid #7DD3FC;height:24px"></div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:#0EA5E9;font-weight:700;margin-bottom:4px">שְׁלַב 2 – עוֹשֶׂה/עוֹשָׂה</div>
+            <div style="border-bottom:2px solid #7DD3FC;height:24px"></div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:#0EA5E9;font-weight:700;margin-bottom:4px">שְׁלַב 1 – מַתְחִיל/מַתְחִילָה</div>
+            <div style="border-bottom:2px solid #7DD3FC;height:24px"></div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:#0EA5E9;font-weight:700;margin-bottom:4px">הַיּוֹם אֲנִי נִמְצָא/נִמְצֵאת כָּאן:</div>
+            <div style="border-bottom:2px solid #7DD3FC;height:24px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span>📚 תַּחֲנָה 3 – הַיְּעָדִים שֶׁלִּי</span>
+    <span>7</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 8: STATION 3 continued ===== -->
+<div class="page station-page theme-blue">
+  <div class="progress-strip">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EF4444"></div>
+    <div class="progress-seg" style="background:#0EA5E9"></div>
+    <div class="progress-seg" style="background:#E0F2FE"></div>
+    <div class="progress-seg" style="background:#E0F2FE"></div>
+  </div>
+  <div class="station-header theme-blue" style="padding-top:12px;padding-bottom:12px">
+    <div class="station-number-big">3</div>
+    <div class="station-header-text">
+      <div class="station-label">תַּחֲנָה שְׁלִישִׁית – הֶמְשֵׁךְ</div>
+      <div class="station-name">הַיְּעָדִים שֶׁלִּי 📚</div>
+    </div>
+  </div>
+  <div class="station-content">
+
+    <!-- Activity 3.3 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">📊</span>
+        <div class="activity-badge" style="background:#E0F2FE;color:#075985">פְּעִילוּת 3</div>
+        <div class="activity-title">הַמֶּד שֶׁלִּי</div>
+      </div>
+      <div class="activity-instruction">
+        צַבְּעוּ אֶת הַמֶּד לְפִי הָרְגָשַׁת שֶׁלְּכֶם – כַּמָּה אֲנִי קָרוֹב/קְרוֹבָה לַיָּעַד?
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start">
+        <div style="text-align:center;flex:1">
+          <svg width="100" height="120" viewBox="0 0 100 120">
+            <rect x="30" y="10" width="40" height="90" rx="20" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="2"/>
+            <rect x="30" y="60" width="40" height="40" rx="0" fill="#38BDF8" opacity="0.5"/>
+            <rect x="30" y="80" width="40" height="20" rx="0" fill="#0EA5E9"/>
+            <rect x="28" y="8" width="44" height="94" rx="22" fill="none" stroke="#0EA5E9" stroke-width="2.5"/>
+            <line x1="20" y1="55" x2="32" y2="55" stroke="#0EA5E9" stroke-width="2"/>
+            <text x="14" y="59" font-size="9" fill="#0EA5E9" font-family="Rubik">50%</text>
+            <line x1="20" y1="32" x2="32" y2="32" stroke="#0EA5E9" stroke-width="1.5"/>
+            <text x="14" y="36" font-size="8" fill="#999" font-family="Rubik">75%</text>
+            <circle cx="50" cy="108" r="10" fill="#0EA5E9"/>
+          </svg>
+          <div style="font-size:12px;color:#0C4A6E;margin-top:4px">צַבְּעוּ עַד לָאן</div>
+        </div>
+        <div style="flex:2">
+          <div style="font-size:15px;line-height:2.4;color:#555">
+            הַיּוֹם אֲנִי מַרְגִּישׁ/מַרְגִּישָׁה שֶׁהַיָּעַד שֶׁלִּי<br>
+            <span style="font-weight:700;color:#0EA5E9">רָחוֹק / בְּאֶמְצַע / קָרוֹב 🎯</span><br><br>
+            כִּתְבוּ מִשְׁפָּט מַדּוּעַ:<br>
+            <span style="border-bottom:2px solid #7DD3FC;display:block;height:26px;margin-top:6px"></span>
+            <span style="border-bottom:2px solid #7DD3FC;display:block;height:26px;margin-top:8px"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 3.4 – Check in after time -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🔄</span>
+        <div class="activity-badge" style="background:#E0F2FE;color:#075985">פְּעִילוּת 4 – בְּדִיקָה מֵאוּחֶרֶת</div>
+        <div class="activity-title">הַיָּעַד אַחֲרֵי חֹדֶשׁ</div>
+      </div>
+      <div class="activity-instruction">
+        חִזְרוּ לַדַּף הַזֶּה אַחֲרֵי חֹדֶשׁ. מַה הִשְׁתַּנָּה?
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+        <div style="background:#F0F9FF;border:2px dashed #7DD3FC;border-radius:12px;padding:10px;text-align:center">
+          <div style="font-size:12px;font-weight:700;color:#0EA5E9;margin-bottom:4px">תַּאֲרִיךְ</div>
+          <div style="border-bottom:1.5px solid #BAE6FD;height:22px"></div>
+        </div>
+        <div style="background:#F0F9FF;border:2px dashed #7DD3FC;border-radius:12px;padding:10px;text-align:center">
+          <div style="font-size:12px;font-weight:700;color:#0EA5E9;margin-bottom:4px">הִגַּעְתִּי לְ...</div>
+          <div style="border-bottom:1.5px solid #BAE6FD;height:22px"></div>
+        </div>
+        <div style="background:#F0F9FF;border:2px dashed #7DD3FC;border-radius:12px;padding:10px;text-align:center">
+          <div style="font-size:12px;font-weight:700;color:#0EA5E9;margin-bottom:4px">הֶרְגֵּשׁ שֶׁלִּי 😊</div>
+          <div style="border-bottom:1.5px solid #BAE6FD;height:22px"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflect-box">
+      <div class="reflect-title">💭 מִשְׁפָּט הַגֵּאוּת שֶׁלִּי לַיָּעַד:</div>
+      <div style="font-size:16px;font-weight:700;color:#0C4A6E;margin:8px 0">"אֲנִי גֵּא/גֵּאָה בְּעַצְמִי כִּי..."</div>
+      <div class="write-area" style="border-color:#7DD3FC;min-height:40px"></div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span>📚 תַּחֲנָה 3 – הַיְּעָדִים שֶׁלִּי</span>
+    <span>8</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 9: STATION 4 – HOBBIES ===== -->
+<div class="page station-page theme-green">
+  <div class="progress-strip">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EF4444"></div>
+    <div class="progress-seg" style="background:#0EA5E9"></div>
+    <div class="progress-seg" style="background:#22C55E"></div>
+    <div class="progress-seg" style="background:#DCFCE7"></div>
+  </div>
+  <div class="station-header theme-green">
+    <div class="station-number-big">4</div>
+    <div class="station-header-text">
+      <div class="station-label">תַּחֲנָה רְבִיעִית</div>
+      <div class="station-name">מָה אֲנִי אוֹהֵב/ת ⚽</div>
+      <div class="station-subtitle">הַתַּחְבִּיבִים וְהַפְּנַאי שֶׁלִּי</div>
+    </div>
+    <div class="station-header-emoji">💚</div>
+  </div>
+  <div class="station-content">
+
+    <!-- Activity 4.1 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🎨</span>
+        <div class="activity-badge" style="background:#DCFCE7;color:#14532D">פְּעִילוּת 1</div>
+        <div class="activity-title">מָה אֲנִי עוֹשֶׂה/עוֹשָׂה בִּזְמַן חוֹפְשִׁי?</div>
+      </div>
+      <div class="activity-instruction">
+        עִגְּלוּ אֶת הַפְּעִילּוּיוֹת שֶׁאַתֶּם אוֹהֲבִים, וְכִתְבוּ עוֹד בַּשּׁוּרָה הָאַחֲרוֹנָה:
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:4px">
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">⚽ כַּדּוּרֶגֶל</span>
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">🎨 צִיּוּר</span>
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">📖 קְרִיאָה</span>
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">🎮 מִשְׂחָקִים</span>
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">🎵 מוּסִיקָה</span>
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">🏊 שְׂחִיָּה</span>
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">🍳 בִּשּׁוּל</span>
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">🧩 פַּזָּלִים</span>
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">🐾 חַיּוֹת</span>
+        <span style="background:#DCFCE7;border:2px solid #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#14532D">🌱 גִּנּוּן</span>
+        <span style="background:white;border:2px dashed #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#86EFAC">+ _________</span>
+        <span style="background:white;border:2px dashed #86EFAC;border-radius:100px;padding:6px 14px;font-size:14px;font-weight:700;color:#86EFAC">+ _________</span>
+      </div>
+    </div>
+
+    <!-- Activity 4.2 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🌟</span>
+        <div class="activity-badge" style="background:#DCFCE7;color:#14532D">פְּעִילוּת 2</div>
+        <div class="activity-title">הַתַּחְבִּיב הַמְּיֻחָד שֶׁלִּי</div>
+      </div>
+      <div class="activity-instruction">
+        בְּחַר/בַּחֲרִי תַּחְבִּיב אֶחָד וְצַיֵּר/צַיְּרִי אוֹתוֹ בַּמַּשְׁבֵּצֶת. כִּתְבוּ לָמָּה אוֹהֲבִים אוֹתוֹ.
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start">
+        <div class="write-area draw-area" style="border-color:#86EFAC;width:120px;min-height:100px;flex-shrink:0">
+          <span class="draw-hint">🖊️</span>
+          <span>צַיְּרוּ כָּאן</span>
+        </div>
+        <div style="flex:1">
+          <div style="font-size:14px;font-weight:700;color:#16A34A;margin-bottom:6px">הַתַּחְבִּיב שֶׁלִּי:</div>
+          <div style="border-bottom:2px solid #86EFAC;height:26px;margin-bottom:8px"></div>
+          <div style="font-size:14px;font-weight:700;color:#16A34A;margin-bottom:6px">אֲנִי אוֹהֵב/ת אֶת זֶה כִּי:</div>
+          <div style="border-bottom:2px solid #86EFAC;height:26px;margin-bottom:8px"></div>
+          <div style="border-bottom:2px solid #86EFAC;height:26px"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 4.3 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">💭</span>
+        <div class="activity-badge" style="background:#DCFCE7;color:#14532D">פְּעִילוּת 3</div>
+        <div class="activity-title">הֲיִיתִי רוֹצֶה לְנַסּוֹת...</div>
+      </div>
+      <div class="activity-instruction">
+        יֵשׁ דְּבָרִים שֶׁעֲדַיִן לֹא נִסִּיתֶם אַךְ מְסַקְרְנִים אֶתְכֶם! מַה זֶה?
+      </div>
+      <div class="write-area" style="border-color:#86EFAC;min-height:60px"></div>
+      <div style="margin-top:8px;font-size:13px;color:#16A34A">💡 אוּלַי מִישֶׁהוּ יְכוֹלִים לַעֲזֹר לָכֶם לְנַסּוֹת!</div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span>⚽ תַּחֲנָה 4 – מָה אֲנִי אוֹהֵב/ת</span>
+    <span>9</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 10: STATION 5 – NEXT STEP ===== -->
+<div class="page station-page theme-pink">
+  <div class="progress-strip">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EF4444"></div>
+    <div class="progress-seg" style="background:#0EA5E9"></div>
+    <div class="progress-seg" style="background:#22C55E"></div>
+    <div class="progress-seg" style="background:#EC4899"></div>
+  </div>
+  <div class="station-header theme-pink">
+    <div class="station-number-big">5</div>
+    <div class="station-header-text">
+      <div class="station-label">תַּחֲנָה חֲמִישִׁית</div>
+      <div class="station-name">הַצַּעַד הַבָּא שֶׁלִּי 🚀</div>
+      <div class="station-subtitle">מָה אֶעֱשֶׂה עַכְשָׁיו?</div>
+    </div>
+    <div class="station-header-emoji">💗</div>
+  </div>
+  <div class="station-content">
+
+    <!-- Explain -->
+    <div style="background:#FCE7F3;border-radius:16px;padding:14px 18px;margin-bottom:14px;font-size:14px;line-height:1.8;color:#9D174D">
+      🚀 <strong>צַעַד</strong> הוּא דָּבָר קָטָן שֶׁאֲנִי יָכוֹל/יְכוֹלָה לַעֲשׂוֹת <strong>הַשָּׁבוּעַ</strong>! לֹא חֵלוֹם גָּדוֹל – מַשֶּׁהוּ קָטָן וּבָרוּר 🌱
+    </div>
+
+    <!-- Activity 5.1 -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🎯</span>
+        <div class="activity-badge" style="background:#FCE7F3;color:#9D174D">פְּעִילוּת 1</div>
+        <div class="activity-title">הַצַּעַד שֶׁלִּי הַשָּׁבוּעַ</div>
+      </div>
+      <div class="activity-instruction">
+        בְּחַר/בַּחֲרִי <strong>צַעַד אֶחָד</strong> מֵהָרְשִׁימָה, אוֹ כִּתְבוּ אֶחָד מִשֶּׁלָּכֶם:
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="background:#FFF5FB;border:2px solid #F9A8D4;border-radius:10px;padding:8px 12px;font-size:14px;display:flex;align-items:center;gap:8px">
+          <span style="width:20px;height:20px;border:2px solid #F472B6;border-radius:4px;flex-shrink:0;display:inline-block"></span>
+          🤝 אֲדַבֵּר עִם חָבֵר/חֲבֵרָה חָדָשׁ/חֲדָשָׁה בַּהַפְסָקָה
+        </div>
+        <div style="background:#FFF5FB;border:2px solid #F9A8D4;border-radius:10px;padding:8px 12px;font-size:14px;display:flex;align-items:center;gap:8px">
+          <span style="width:20px;height:20px;border:2px solid #F472B6;border-radius:4px;flex-shrink:0;display:inline-block"></span>
+          📖 אֶקְרָא לְבַד 10 דַּקּוֹת כָּל יוֹם
+        </div>
+        <div style="background:#FFF5FB;border:2px solid #F9A8D4;border-radius:10px;padding:8px 12px;font-size:14px;display:flex;align-items:center;gap:8px">
+          <span style="width:20px;height:20px;border:2px solid #F472B6;border-radius:4px;flex-shrink:0;display:inline-block"></span>
+          🙏 אֲבַקֵּשׁ עֶזְרָה כְּשֶׁקָּשֶׁה לִי
+        </div>
+        <div style="background:#FFF5FB;border:2px solid #F9A8D4;border-radius:10px;padding:8px 12px;font-size:14px;display:flex;align-items:center;gap:8px">
+          <span style="width:20px;height:20px;border:2px solid #F472B6;border-radius:4px;flex-shrink:0;display:inline-block"></span>
+          😊 אֹמַר מַשֶּׁהוּ טוֹב לְחָבֵר/לַחֲבֵרָה כָּל יוֹם
+        </div>
+        <div style="background:#FFF5FB;border:2px solid #F9A8D4;border-radius:10px;padding:8px 12px;font-size:14px;display:flex;align-items:center;gap:8px">
+          <span style="width:20px;height:20px;border:2px solid #F472B6;border-radius:4px;flex-shrink:0;display:inline-block"></span>
+          ✏️ אֶתְאַמֵּן בַּכְּתִיבָה _____ דַּקּוֹת
+        </div>
+        <div style="background:white;border:2px dashed #F9A8D4;border-radius:10px;padding:8px 12px;font-size:14px;display:flex;align-items:center;gap:8px">
+          <span style="width:20px;height:20px;border:2px solid #F472B6;border-radius:4px;flex-shrink:0;display:inline-block"></span>
+          <span style="color:#F9A8D4">הַצַּעַד שֶׁלִּי: _________________________</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commitment Card -->
+    <div class="commitment-card" style="border-color:#F472B6;background:linear-gradient(135deg,#FCE7F3,#FFF0F8)">
+      <div style="font-size:22px;text-align:center;margin-bottom:6px">🌟 כַּרְטִיס הַהִתְחַיְּבוּת שֶׁלִּי 🌟</div>
+      <div style="font-size:16px;line-height:2.4;text-align:center;color:#9D174D">
+        אֲנִי, <span class="commitment-line" style="border-color:#F472B6;width:120px"></span>,<br>
+        מִתְחַיֵּב/מִתְחַיֶּבֶת לַעֲשׂוֹת:<br>
+        <span class="commitment-line" style="border-color:#F472B6;width:200px"></span><br>
+        כָּל <span class="commitment-line" style="border-color:#F472B6;width:80px"></span> בַּשָּׁבוּעַ.
+      </div>
+      <div class="signature-area">
+        <div class="sig-field">
+          <div class="sig-line"></div>
+          <div class="sig-label">הַחֲתִימָה שֶׁלִּי</div>
+        </div>
+        <div style="font-size:28px">🤝</div>
+        <div class="sig-field">
+          <div class="sig-line"></div>
+          <div class="sig-label">תַּאֲרִיךְ</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span>🚀 תַּחֲנָה 5 – הַצַּעַד הַבָּא שֶׁלִּי</span>
+    <span>10</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 11: STATION 5 continued + Summary ===== -->
+<div class="page station-page theme-pink">
+  <div class="progress-strip">
+    <div class="progress-seg" style="background:#7C3AED"></div>
+    <div class="progress-seg" style="background:#EF4444"></div>
+    <div class="progress-seg" style="background:#0EA5E9"></div>
+    <div class="progress-seg" style="background:#22C55E"></div>
+    <div class="progress-seg" style="background:#EC4899"></div>
+  </div>
+  <div class="station-header theme-pink" style="padding-top:12px;padding-bottom:12px">
+    <div class="station-number-big">5</div>
+    <div class="station-header-text">
+      <div class="station-label">תַּחֲנָה חֲמִישִׁית – מַעֲקָב</div>
+      <div class="station-name">בּוֹדֵק/בּוֹדֶקֶת אֵיךְ הָלַךְ! 🚀</div>
+    </div>
+  </div>
+  <div class="station-content">
+
+    <!-- Weekly tracker -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">📅</span>
+        <div class="activity-badge" style="background:#FCE7F3;color:#9D174D">מַעֲקָב שְׁבוּעוֹת</div>
+        <div class="activity-title">עָשִׂיתִי אֶת הַצַּעַד שֶׁלִּי?</div>
+      </div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="background:#FCE7F3">
+              <th style="padding:8px 6px;text-align:right;font-weight:700;color:#9D174D;border-radius:8px 0 0 0">שָׁבוּעַ</th>
+              <th style="padding:8px 6px;text-align:center;color:#9D174D">א׳</th>
+              <th style="padding:8px 6px;text-align:center;color:#9D174D">ב׳</th>
+              <th style="padding:8px 6px;text-align:center;color:#9D174D">ג׳</th>
+              <th style="padding:8px 6px;text-align:center;color:#9D174D">ד׳</th>
+              <th style="padding:8px 6px;text-align:center;color:#9D174D">ה׳</th>
+              <th style="padding:8px 6px;text-align:right;color:#9D174D">אֵיךְ הֵרְגַּשְׁתִּי?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #FCE7F3">
+              <td style="padding:8px 6px;font-weight:700;color:#9D174D">שָׁבוּעַ 1</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;width:100px"><div style="border-bottom:1px solid #F9A8D4;height:24px"></div></td>
+            </tr>
+            <tr style="border-bottom:1px solid #FCE7F3;background:#FFFBFE">
+              <td style="padding:8px 6px;font-weight:700;color:#9D174D">שָׁבוּעַ 2</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px"><div style="border-bottom:1px solid #F9A8D4;height:24px"></div></td>
+            </tr>
+            <tr style="border-bottom:1px solid #FCE7F3">
+              <td style="padding:8px 6px;font-weight:700;color:#9D174D">שָׁבוּעַ 3</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px"><div style="border-bottom:1px solid #F9A8D4;height:24px"></div></td>
+            </tr>
+            <tr style="background:#FFFBFE">
+              <td style="padding:8px 6px;font-weight:700;color:#9D174D">שָׁבוּעַ 4</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px;text-align:center;font-size:16px">☐</td>
+              <td style="padding:8px 6px"><div style="border-bottom:1px solid #F9A8D4;height:24px"></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- End of month reflection -->
+    <div class="activity-card">
+      <div class="activity-header">
+        <span class="activity-icon">🏅</span>
+        <div class="activity-badge" style="background:#FCE7F3;color:#9D174D">סִיּוּם</div>
+        <div class="activity-title">כַּמָּה הִצְלַחְתֶּם!</div>
+      </div>
+      <div style="display:flex;gap:12px">
+        <div style="flex:1">
+          <div style="font-size:14px;font-weight:700;color:#BE185D;margin-bottom:6px">✨ הַדָּבָר הַכִּי טוֹב שֶׁעָשִׂיתִי:</div>
+          <div class="write-area" style="border-color:#F9A8D4;min-height:50px"></div>
+        </div>
+        <div style="flex:1">
+          <div style="font-size:14px;font-weight:700;color:#BE185D;margin-bottom:6px">🔄 בַּפַּעַם הַבָּאָה אֲנִי אֶנַּסֶּה:</div>
+          <div class="write-area" style="border-color:#F9A8D4;min-height:50px"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span>🚀 תַּחֲנָה 5 – הַצַּעַד הַבָּא שֶׁלִּי</span>
+    <span>11</span>
+  </div>
+</div>
+
+
+<!-- ===== PAGE 12: FINAL MAP ===== -->
+<div class="page" style="padding:14mm 16mm;background:linear-gradient(135deg,#FFFBF0 0%,#FFF8E8 100%)">
+  <div style="text-align:center;margin-bottom:16px">
+    <div style="font-size:40px;margin-bottom:4px">🏆🌟🏆</div>
+    <div style="font-size:28px;font-weight:900;color:var(--ink)">הַמַּפָּה הַמְּנַצַּחַת שֶׁלִּי!</div>
+    <div style="font-size:15px;color:#888;margin-top:4px">כָּאן מִתְכַּנֶּסֶת כָּל הַצְּמִיחָה שֶׁלִּי</div>
+  </div>
+
+  <div class="my-map-container">
+    <div class="map-center">😊</div>
+    <div class="map-name-big">
+      שֵׁם: ____________________________
+    </div>
+    <div class="map-grid">
+      <div class="map-cell" style="border-color:#A78BFA">
+        <div class="map-cell-title" style="color:#7C3AED">💪 הַחוֹזְקוֹת שֶׁלִּי</div>
+        <div class="map-cell-lines"></div>
+      </div>
+      <div class="map-cell" style="border-color:#FCA5A5">
+        <div class="map-cell-title" style="color:#EF4444">❤️ הָאֲנָשִׁים הַחֲשׁוּבִים</div>
+        <div class="map-cell-lines"></div>
+      </div>
+      <div class="map-cell" style="border-color:#7DD3FC">
+        <div class="map-cell-title" style="color:#0EA5E9">📚 הַיְּעַד שֶׁלִּי</div>
+        <div class="map-cell-lines"></div>
+      </div>
+      <div class="map-cell" style="border-color:#86EFAC">
+        <div class="map-cell-title" style="color:#22C55E">⚽ מָה אֲנִי אוֹהֵב/ת</div>
+        <div class="map-cell-lines"></div>
+      </div>
+    </div>
+    <div class="map-cell" style="border-color:#F9A8D4;margin-top:10px">
+      <div class="map-cell-title" style="color:#EC4899">🚀 הַצַּעַד הַבָּא שֶׁלִּי</div>
+      <div style="font-size:15px;line-height:2.4;padding:4px 0">
+        אֲנִי מִתְחַיֵּב/מִתְחַיֶּבֶת לַעֲשׂוֹת: <span style="border-bottom:2px solid #F9A8D4;display:inline-block;width:200px;vertical-align:bottom;height:26px"></span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:16px;background:linear-gradient(135deg,#FFF3C4,#FFF8E1);border:3px solid var(--yellow);border-radius:20px;padding:16px 20px;text-align:center">
+    <div style="font-size:18px;font-weight:900;margin-bottom:8px">🌈 מִשְׁפָּט סִיּוּם</div>
+    <div style="font-size:16px;line-height:2.6;color:#555">
+      "אֲנִי גֵּא/גֵּאָה בְּעַצְמִי כִּי <span style="border-bottom:2px solid var(--orange);display:inline-block;width:180px;vertical-align:bottom;height:26px"></span>"
+    </div>
+  </div>
+
+  <div style="margin-top:12px;display:flex;justify-content:center;gap:8px">
+    <span style="font-size:24px">⭐</span>
+    <span style="font-size:24px">🌟</span>
+    <span style="font-size:24px">⭐</span>
+    <span style="font-size:24px">🌟</span>
+    <span style="font-size:24px">⭐</span>
+  </div>
+
+  <div class="page-footer" style="margin-top:auto">
+    <span>🏆 תְּמוּנַת הָעָתִיד הַמְּנַצַּחַת שֶׁלִּי</span>
+    <span>12</span>
+  </div>
+</div>
+
+</body>
+</html>
